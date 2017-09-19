@@ -13,10 +13,10 @@ $(function() {
 		}
 	});
 		
-
+	$('.shop-product__item').equalHeights();
 	$(document).ready(function() {
 
-		$('.shop-product__item').equalHeights();
+		
 		
 		var $menu = $("#my-menu").mmenu({
 			extensions: [ 'theme-dark', 'effect-menu-slide', 'pagedim-black'],
