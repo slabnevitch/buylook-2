@@ -95,6 +95,7 @@ $(function() {
 		  onTranslated: translated,
 			autoplay: true,
 			responsiveClass: true,
+			smartSpeed: 500,
 			responsive:{
 				0:{
 					items:1,
