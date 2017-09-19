@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Корзина</title>
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <!--if lt IE 9
+    script(src='js/html5shiv.min.js')
+    script(src='js/es5-shim.min.js')
+    script(src='js/html5shiv-printshiv.min.js')
+    script(src='js/1.4.2/respond.min.js')
+    
+    -->
+  </head>
+  <body>
+    <div id="my-wrapper">
+      <div id="my-header">
+        <header class="header">
+          <div class="header__top">
+            <div class="container header__relative">
+              <div class="row">
+                <div class="col-md-4"><a href="#" class="header__logo-wrap">
+                    <picture>
+                      <source srcset="img/logo.svg"><img src="img/logo.png" alt="логотип" title="buylook">
+                    </picture></a></div>
+                <div class="col-md-8 header__static">
+                  <div class="header__info">
+                    <div class="header__info-left">
+                      <div class="header__top-item">
+                        <div class="header__top-ico top-phone"></div>
+                        <div class="header__top-text">
+                          <div class="green">+7 967 278 28 67</div>
+                          <div>+7 499 555 77 77</div>
+                        </div>
+                      </div>
+                      <div class="header__top-item">
+                        <div class="header__top-ico top-clock"></div>
+                        <div class="header__top-text">
+                          <div>Пн-пт 9— 21</div>
+                          <div>Cб-вс 10 —19 </div>
+                        </div>
+                      </div>
+                      <div class="header__top-item">
+                        <div class="header__top-ico top-mail"></div>
+                        <div class="header__top-text">
+                          <div>nfo@buy-look.ru</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="header__info-right">
+                      <div class="header__enter">
+                        <div class="header__reg">
+                          <div class="header__reg-ico top-user"></div>
+                          <div class="header__reg-links"><a href="#" class="green">Вход</a><a href="#">/регистрация</a></div>
+                        </div>
+                      </div>
+                      <div class="header__cart"><a href="#" id="tooltip-cart" data-tooltip-content="#tooltip-cart_content" class="header__reg-ico top-cart tooltip-cart"><span class="header__cart-count">5</span></a>
+                        <div class="header__reg-links"><a href="#">корзина </a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__bottom">
+            <div class="container header__relative">
+              <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-7">
+                  <div class="header__bottom-descr">Интернет магазин российских дизайнеров</div>
+                </div>
+                <div class="col-lg-8 col-md-6 col-sm-5 header__static">
+                  <nav class="desktop-menu hidden-md hidden-sm hidden-xs">
+                    <ul class="header-menu">
+                      <li class="header-menu__item header-menu__item--active"><a href="#" class="header-menu__link">о нас</a></li>
+                      <li class="header-menu__item"><a href="#" class="header-menu__link">магазин</a></li>
+                      <li class="header-menu__item"><a href="#" class="header-menu__link">дизайнеры</a></li>
+                      <li class="header-menu__item"><a href="#" class="header-menu__link">buy look</a></li>
+                      <li class="header-menu__item"><a href="#" class="header-menu__link">новости</a></li>
+                      <li class="header-menu__item"><a href="#" class="header-menu__link">контакты</a></li>
+                    </ul>
+                  </nav>
+                  <nav id="my-menu">
+                    <ul class="header-menu header-menu--mobile hidden">
+                      <li class="header-menu__item header-menu__item--active"><a href="#" class="header-menu__link">о нас</a></li>
+                      <li class="header-menu__item"><a href="#" class="header-menu__link">магазин</a></li>
+                      <li class="header-menu__item"><a href="#" class="header-menu__link">дизайнеры</a></li>
+                      <li class="header-menu__item"><a href="#" class="header-menu__link">buy look</a></li>
+                      <li class="header-menu__item"><a href="#" class="header-menu__link">новости</a></li>
+                      <li class="header-menu__item"><a href="#" class="header-menu__link">контакты</a></li>
+                    </ul>
+                  </nav><a href="#my-menu" class="toggle-mnu hidden-lg"><span></span></a>
+                  <form action="#" method="get" class="header__search">
+                    <div class="header__search-inner">
+                      <input type="text" name="search" placeholder="поиск">
+                      <input type="submit">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div id="my-content">
+        <section class="cart sect-main">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="sect-title-wrap">
+                  <h1>Корзина</h1><a href="#" class="continue"> 
+                    <div class="continue-chevron"></div>продолжить покупки</a>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-7">
+                <form action="#" class="cart__form">
+                  <ul class="cart__list">
+                    <li class="cart__item">
+                      <div class="cart__img-wrap"><img src="img/cart-1.jpg" alt="alt"></div>
+                      <div class="cart__item-info">
+                        <h4 class="cart__item-title">LIME BLOSSOM Платье Миди Lilas</h4>
+                        <div class="cart__item-features">
+                          <div class="prod-color"><span>цвет:</span><span>розовый</span></div>
+                          <div class="prod-size"><span>Размер:</span><span>42</span></div>
+                          <div class="prod-quantity"><span>Кол-во</span>
+                            <select name="quantity" class="select-quantity">
+                              <option value="1" selected="selected">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                              <option value="7">7</option>
+                              <option value="8">8</option>
+                              <option value="9">9</option>
+                              <option value="9">9</option>
+                              <option value="10">10</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="cart__item-price">
+                          <div class="price-ordinary">15 000 <span class="ruble">Р</span></div>
+                          <div class="price-sale">15 000 <span class="ruble">Р</span></div>
+                        </div><a href="#" class="cart__item-close"></a>
+                      </div>
+                    </li>
+                    <li class="cart__item">
+                      <div class="cart__img-wrap"><img src="img/cart-2.jpg" alt="alt"></div>
+                      <div class="cart__item-info">
+                        <h4 class="cart__item-title">LIME BLOSSOM Костюм брючный</h4>
+                        <div class="cart__item-features">
+                          <div class="prod-color"><span>цвет:</span><span>голубой</span></div>
+                          <div class="prod-size"><span>Размер:</span><span>42</span></div>
+                          <div class="prod-quantity"><span>Кол-во</span>
+                            <select name="quantity" class="select-quantity">
+                              <option value="1" selected="selected">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                              <option value="7">7</option>
+                              <option value="8">8</option>
+                              <option value="9">9</option>
+                              <option value="9">9</option>
+                              <option value="10">10</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="cart__item-price">
+                          <div class="price-ordinary">19 000 <span class="ruble">Р</span></div>
+                          <div class="price-sale">19 000 <span class="ruble">Р</span></div>
+                        </div><a href="#" class="cart__item-close"></a>
+                      </div>
+                    </li>
+                    <li class="cart__item cart__item--sale">
+                      <div class="cart__img-wrap"><img src="img/cart-3.jpg" alt="alt"></div>
+                      <div class="cart__item-info">
+                        <h4 class="cart__item-title">LIME BLOSSOM Комбинезон</h4>
+                        <div class="cart__item-features">
+                          <div class="prod-color"><span>цвет:</span><span>черный</span></div>
+                          <div class="prod-size"><span>Размер:</span><span>42</span></div>
+                          <div class="prod-quantity"><span>Кол-во</span>
+                            <select name="quantity" class="select-quantity">
+                              <option value="1" selected="selected">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                              <option value="7">7</option>
+                              <option value="8">8</option>
+                              <option value="9">9</option>
+                              <option value="9">9</option>
+                              <option value="10">10</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="cart__item-price">
+                          <div class="price-ordinary">15 000 <span class="ruble">Р</span></div>
+                          <div class="price-sale">15 000 <span class="ruble">Р</span></div>
+                        </div><a href="#" class="cart__item-close"></a>
+                      </div>
+                    </li>
+                    <li class="cart__item">
+                      <div class="cart__img-wrap"><img src="img/cart-2.jpg" alt="alt"></div>
+                      <div class="cart__item-info">
+                        <h4 class="cart__item-title">LIME BLOSSOM Костюм брючный</h4>
+                        <div class="cart__item-features">
+                          <div class="prod-color"><span>цвет:</span><span>голубой</span></div>
+                          <div class="prod-size"><span>Размер:</span><span>42</span></div>
+                          <div class="prod-quantity"><span>Кол-во</span>
+                            <select name="quantity" class="select-quantity">
+                              <option value="1" selected="selected">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                              <option value="7">7</option>
+                              <option value="8">8</option>
+                              <option value="9">9</option>
+                              <option value="9">9</option>
+                              <option value="10">10</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="cart__item-price">
+                          <div class="price-ordinary">19 000 <span class="ruble">Р</span></div>
+                          <div class="price-sale">19 000 <span class="ruble">Р</span></div>
+                        </div><a href="#" class="cart__item-close"></a>
+                      </div>
+                    </li>
+                    <li class="cart__item">
+                      <div class="cart__img-wrap"><img src="img/cart-1.jpg" alt="alt"></div>
+                      <div class="cart__item-info">
+                        <h4 class="cart__item-title">LIME BLOSSOM Платье Миди Lilas</h4>
+                        <div class="cart__item-features">
+                          <div class="prod-color"><span>цвет:</span><span>розовый</span></div>
+                          <div class="prod-size"><span>Размер:</span><span>42</span></div>
+                          <div class="prod-quantity"><span>Кол-во</span>
+                            <select name="quantity" class="select-quantity">
+                              <option value="1" selected="selected">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                              <option value="7">7</option>
+                              <option value="8">8</option>
+                              <option value="9">9</option>
+                              <option value="9">9</option>
+                              <option value="10">10</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="cart__item-price">
+                          <div class="price-ordinary">15 000 <span class="ruble">Р</span></div>
+                          <div class="price-sale">15 000 <span class="ruble">Р</span></div>
+                        </div><a href="#" class="cart__item-close"></a>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="cart__summary">
+                    <div class="cart__summary-inner"><span class="green">сумма заказа:</span><span class="cart__total">85 000 <span class="ruble">Р</span></span></div>
+                  </div>
+                  <div class="cart__checkboxes">
+                    <div class="cart__checkboxes-item">
+                      <div class="cart__checkboxes-header">
+                        <div class="cart__checkboxes-ico ico-box-invert"></div>
+                        <div class="cart__checkboxes-title">СПОСОБ ДОСТАВКИ</div>
+                      </div>
+                      <div class="cart__checkboxes-body">
+                        <label>
+                          <input type="radio" name="delivery-option" value="самовывоз"><span class="cart__checkboxes-custom"><span class="cart__checkboxes-dot"></span></span><span class="cart__checkboxes-method">Самовывоз</span><span class="cart__checkboxes-text">Вы можете забрать заказ бесплатно по адресу: метро Римская (Таганский Район)</span>
+                        </label>
+                        <label>
+                          <input type="radio" name="delivery-option" value="курьер"><span class="cart__checkboxes-custom"><span class="cart__checkboxes-dot"></span></span><span class="cart__checkboxes-method">Курьер по Москве</span><span class="cart__checkboxes-text">При покупке свыше 5000 р стоимость доставки по Москве - 350 <span class="ruble">Р</span><br>При сумме заказа менее 5000 <span class="ruble">Р</span>,  стоимость доставки — 500 <span class="ruble">Р</span><br>Сроки доставки 1-3 дня</span>
+                        </label>
+                        <label>
+                          <input type="radio" name="delivery-option" value="почта россии"><span class="cart__checkboxes-custom"><span class="cart__checkboxes-dot"></span></span><span class="cart__checkboxes-method">ПОЧТОЙ РОССИИ</span><span class="cart__checkboxes-text">Доставка по всей России ( в том числе для Московской Области)<br>Стоимость доставки — 500 <span class="ruble">Р</span> рублей. Сроки от 7 до 30 дней.</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="cart__checkboxes-item">
+                      <div class="cart__checkboxes-header">
+                        <div class="cart__checkboxes-ico ico-payment-invert"></div>
+                        <div class="cart__checkboxes-title">СПОСОБ ОПЛАТЫ</div>
+                      </div>
+                      <div class="cart__checkboxes-body">
+                        <label>
+                          <input type="radio" name="payment-option" value="карта"><span class="cart__checkboxes-custom"><span class="cart__checkboxes-dot"></span></span><span class="cart__checkboxes-method">Картой на сайте</span><span class="cart__checkboxes-text">После подтверждения заказа, Вы будете перенаправлены на защищенную платежную страницу Яндекс-кассы</span>
+                        </label>
+                        <label>
+                          <input type="radio" name="payment-option" value="наличные"><span class="cart__checkboxes-custom"><span class="cart__checkboxes-dot"></span></span><span class="cart__checkboxes-method">Наличными</span><span class="cart__checkboxes-text">Вы можете оплатить заказ наличными курьеру или в пункте самовывоза.</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="cart__checkboxes-item">
+                      <div class="cart__checkboxes-header">
+                        <div class="cart__checkboxes-ico ico-promo-invert"></div>
+                        <div class="cart__checkboxes-title">промо-код</div>
+                      </div>
+                      <div class="cart__checkboxes-body">
+                        <label class="label-promo">
+                          <input type="text" name="promo-code" placeholder="Введите промо-код здесь">
+                        </label>
+                        <button class="cart__checkboxes-send">применить</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="col-md-5">
+                <div class="cart__tips">
+                  <div class="cart__tip"><a href="#" class="cart__tip-header">
+                      <div class="cart__tip-ico ico-locked"></div>
+                      <div class="cart__tip-title">БЕЗОПАСНЫЕ ПЛАТЕЖИ</div>
+                      <div class="cart__tip-chevron"></div></a>
+                    <p class="cart__tip-body">Магазин BUY-LOOK.RU защищает информацию при проведении платежа. Вы можете оплатить свой заказ онлайн, с помощью предложенных методов оплат, через процессинговую компанию Яндекс-касса. После подтверждения заказа, Вы будете перенаправлены на защищенную платежную страницу, где Вам необходимо будет ввести данные для оплаты заказа. После успешной оплаты на указанную в форме оплаты электронную почту будет направлен электронный чек с информацией о заказе и данными по произведенной оплате. Данные Вашей карты вводятся на специальной защищенной платежной странице. Передача информации происходит с применением технологии шифрования SSL. Дальнейшая передача информации осуществляется по закрытым банковским каналам, имеющим наивысший уровень надежности. Яндекс-касса не передает данные Вашей карты магазину и иным третьим лицам.</p>
+                  </div>
+                  <div class="cart__tip"><a href="#" class="cart__tip-header">
+                      <div class="cart__tip-ico ico-box"></div>
+                      <div class="cart__tip-title">УСЛОВИЯ ДОСТАВКИ</div>
+                      <div class="cart__tip-chevron"></div></a>
+                    <p class="cart__tip-body">В нашем магазине Вы можете воспользоваться различными способами доставки: Самовывоз, Курьерская доставка по Москве и Доставка Почтой России. Стоимость доставки будет указана при выборе соответствующего варианта. При доставке Почтой России отправлению будет присвоен трекинг-номер для отслеживания , который мы сообщим Вам.  Дополнительную информацию Вы можете получить в разделе <a href="#" class="cart__tip-link">Доставка.</a></p>
+                  </div>
+                  <div class="cart__tip"><a href="#" class="cart__tip-header">
+                      <div class="cart__tip-ico ico-return"></div>
+                      <div class="cart__tip-title">УСЛОВИЯ ВОЗВРАТА</div>
+                      <div class="cart__tip-chevron"></div></a>
+                    <p class="cart__tip-body">Уважаемый покупатель, напоминаем, что в нашем магазине Вы можете легко и быстро осуществить возврат в течение 7-ми дней с момента получения покупки при соблюдении простых правил:<br>- сохранение внешнего вида товара, включая бирки и этикетки.<br>- наличие документа, подтверждающего факт покупки (кассовый чек).<br>Для получения более полной информации рекомендуем ознакомиться с <a href="#" class="cart__tip-link">Политикой Возврата </a>нашего магазина или Вы можете проконсультироваться в <a href="#" class="cart__tip-link">Службе Поддержки Покупателя.</a></p>
+                  </div>
+                  <div class="cart__tip"><a href="#" class="cart__tip-header">
+                      <div class="cart__tip-ico ico-contact"></div>
+                      <div class="cart__tip-title">СВЯЗАТЬСЯ С НАМИ</div>
+                      <div class="cart__tip-chevron"></div></a>
+                    <p class="cart__tip-body">По всем вопросам вы можете связаться с нами по телефонам +7 967 278 28 67, +7 499 555 77 77, или по электронной почте <a href="#" class="cart__tip-link">info@buy-look.ru</a><span>Вы также можете оставить нам сообщение на странице <a href="#" class="cart__tip-link">Контакты.</a></span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="horizontal-line"></div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="cart__result">
+                  <div class="cart__summ"><span>Сумма заказа: </span><span class="cart__summ-number">85 000 <span class="ruble">Р</span></span></div>
+                  <div class="cart__delivery"><span>Стоимость доставки: </span><span class="cart__summ-number">350 <span class="ruble">Р</span></span></div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="cart__final green"><span>итого: </span><span class="cart__final-number">85 350 <span class="ruble">Р</span></span></div>
+              </div>
+              <div class="col-md-4">
+                <button class="button-green continue-ordering">продолжить заказ >>		</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Здесь пишем код-->
+      </div>
+      <div id="my-footer">
+        <footer class="footer">
+          <div class="footer__top">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="footer__buttons"><a href="#" class="footer__button">подписка</a><a href="#" class="footer__button">сотрудничество</a><a href="#" class="footer__button">карта сайта</a></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                  <div class="footer__inner">
+                    <div class="row">
+                      <div class="col-md-3 col-md-offset-1 col-sm-6 center-text">
+                        <div class="footer__inner-item">
+                          <h3 class="footer__title">категории</h3>
+                          <ul>
+                            <li><a href="#">Look book</a></li>
+                            <li><a href="#">Женское</a></li>
+                            <li><a href="#">Мужское</a></li>
+                            <li><a href="#">Аксессуары</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-md-offset-1 col-sm-6 center-text">
+                        <div class="footer__inner-item">
+                          <h3 class="footer__title">информация</h3>
+                          <ul>
+                            <li><a href="#">О Нас</a></li>
+                            <li><a href="#">Юридическая информация</a></li>
+                            <li><a href="#">Способы оплаты</a></li>
+                            <li><a href="#">Доставка</a></li>
+                            <li><a href="#">Возврат</a></li>
+                            <li><a href="#">Пресса</a></li>
+                            <li><a href="#">Политика конфиденциальности</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-sm-12 center-text">
+                        <div class="footer__inner-item">
+                          <h3 class="footer__title">помощь</h3>
+                          <ul>
+                            <li><a href="#">Служба поддержки</a></li>
+                            <li><a href="#">Мой Buy-Look</a></li>
+                            <li><a href="#">Способы оплаты</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-3 col-md-offset-1 col-sm-6 col-xs-12">
+                  <div class="copyright">Copyright 2015. All Rights Reserved.</div>
+                </div>
+                <div class="col-md-3 col-md-offset-1 col-sm-6 col-xs-12">
+                  <ul class="footer__socials">
+                    <li><a href="#" class="footer__socials-link footer-twi"></a></li>
+                    <li><a href="#" class="footer__socials-link footer-fb"></a></li>
+                    <li><a href="#" class="footer__socials-link footer-vk"></a></li>
+                    <li><a href="#" class="footer__socials-link footer-inst"></a></li>
+                  </ul>
+                </div>
+                <div class="col-md-3 col-offset-1 col-sm-12 col-xs-12">
+                  <div class="creators">Design by <a href="some-site.ru">Fine Line </a>studio</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <div class="popup-container">
+      <div id="tooltip-cart_content" class="popup popup-cart">
+        <div class="popup popup-cart__title">
+          <div class="popup popup-cart__title-left">
+            <div class="ico-cart"></div><span class="popup-cart__header">корзина</span><span>(</span><span class="popup-cart__count">5</span><span>)</span>
+          </div><a href="#" class="popup popup-cart__look-link">Смотреть всё</a>
+        </div>
+        <div class="popup-cart__content">
+          <div class="popup-cart__item"><img src="img/cart-1.jpg" alt="alt" class="popup-cart__img">
+            <div class="popup-cart__item-text">
+              <div class="popup-cart__item-title">LIME BLOSSOM Платье Миди Lilas</div><span class="popup-cart__item-color">терракотовый</span><span class="popup-cart__item-size">42</span><span class="popup-cart__item-count">1 шт</span>
+              <div class="popup-cart__item-price">15 000<span class="ruble">Р</span></div>
+            </div>
+          </div>
+          <div class="popup-cart__item"><img src="img/cart-2.jpg" alt="alt" class="popup-cart__img">
+            <div class="popup-cart__item-text">
+              <div class="popup-cart__item-title">LIME BLOSSOM Платье Миди Lilas</div><span class="popup-cart__item-color">голубой</span><span class="popup-cart__item-size">42</span><span class="popup-cart__item-count">1 шт</span>
+              <div class="popup-cart__item-price">15 000<span class="ruble">Р</span></div>
+            </div>
+          </div>
+          <div class="popup-cart__item"><img src="img/cart-3.jpg" alt="alt" class="popup-cart__img">
+            <div class="popup-cart__item-text">
+              <div class="popup-cart__item-title">LIME BLOSSOM Платье Миди Lilas</div><span class="popup-cart__item-color">терракотовый</span><span class="popup-cart__item-size">42</span><span class="popup-cart__item-count">1 шт</span>
+              <div class="popup-cart__item-price">15 000<span class="ruble">Р</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="popup-cart__summary green"><span>сумма заказа:</span><span class="popup-cart__summ">43 000<span class="ruble">Р</span></span></div><a href="#" class="popup-cart__ordering button-gray">оформить заказ >></a>
+      </div>
+    </div>
+    <script src="js/libs.min.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>
